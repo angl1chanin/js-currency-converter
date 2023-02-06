@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/b1d3aae742.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Currency converter</title>
+</head>
+<body>
+  
+  <main>
+    <section class="currency-converter">
+      <div class="currency-converter__container container">
+        <div class="currency-converter__wrapper">
+          <div class="currency-converter__fields">
+
+            <div class="currency-converter__send">
+              <label class="currency-converter__label" for="amount">
+                <span><i class="fa-solid fa-wallet"></i> From</span>
+                @@include("chunk/dropdown.html")
+              </label>
+              <input class="currency-converter__input" id="currency-converter__value-from" type="text" placeholder="1,000" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
+            </div>
+
+            <button class="currency-converter__btn"><i class="fa-solid fa-repeat"></i></button>
+
+            <div class="currency-converter__gets">
+              <label class="currency-converter__label" for="amount">
+                <span><i class="fa-solid fa-coins"></i> To</i></span>
+                @@include("chunk/dropdown.html")
+              </label>
+              <input class="currency-converter__input" id="currency-converter__value-to" type="text" placeholder="1,000" readonly oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/dropdown.js"></script>
+  <script src="js/currency-converter.js"></script>
+</body>
+</html>

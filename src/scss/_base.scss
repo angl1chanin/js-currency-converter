@@ -1,0 +1,15 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  background: var(--body-bg) center / cover no-repeat;
+}
+
+.container {
+  width: min(100% - 3rem, 120rem);
+  margin-inline: auto;
+}
